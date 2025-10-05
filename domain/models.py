@@ -7,3 +7,4 @@ class Car:
     year: int
     color: str
     speed: float
+    csrfmiddlewaretoken: str = None
