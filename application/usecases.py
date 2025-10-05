@@ -14,3 +14,10 @@ class ListCarUseCase:
 
     def execute(self):
         return self.car_repository.list_all()
+    
+class DeleteCarUseCase:
+    def __init__(self, car_repository):
+        self.car_repository = car_repository
+
+    def execute(self, car_id):
+        self.car_repository.delete(car_id)

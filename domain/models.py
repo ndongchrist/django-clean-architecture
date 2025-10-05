@@ -8,3 +8,5 @@ class Car:
     color: str
     speed: float
     csrfmiddlewaretoken: str = None
+    
+#models.Model

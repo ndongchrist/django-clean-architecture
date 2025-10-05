@@ -15,3 +15,11 @@ class CarRepository:
     def list_all(self):
         cars = CarModel.objects.all()
         return [Car(model=car.model, year=car.year, color=car.color, speed=car.speed) for car in cars]
+    
+    def delete(self, car_id):
+        try:
+            car = CarModel.objects.get(id=car_id)
+            car.delete()
+            return True
+        except CarModel.DoesNotExist:
+            return False
